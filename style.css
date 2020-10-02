@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #0c122c;
+  background-image: url("images/bg-desktop.png");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif; }
+
+.container {
+  display: flex;
+  width: 80%;
+  justify-content: center; }
+
+.logo-box {
+  padding: 2rem 8rem 2rem 3rem;
+  margin-right: 2rem;
+  background-color: #1d2c67;
+  border-radius: 10px;
+  border-top-right-radius: 80px; }
+
+.features {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around; }
+  .features img {
+    background-color: #0c122c;
+    padding: .6rem;
+    margin: .4rem;
+    border-radius: 10px;
+    transition: background-color .3s; }
+    .features img:hover, .features img:active {
+      background-color: #1d2c67; }
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d2c67;
+  align-self: flex-end;
+  padding: 2.5rem 2rem;
+  width: 50%;
+  border-radius: 10px;
+  position: relative; }
+  .progress .progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #0c122c;
+    border-radius: 20px; }
+  .progress .detail {
+    margin-bottom: .8rem;
+    color: #848794; }
+    .progress .detail .used-data {
+      color: #dddbff;
+      font-size: 1.3rem;
+      font-weight: 700; }
+  .progress .data-value {
+    position: absolute;
+    top: -1rem;
+    align-self: flex-end;
+    margin-bottom: .4rem;
+    background-color: #fff;
+    color: #0c122c;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border-bottom-right-radius: 0; }
+    .progress .data-value::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: 0;
+      height: 20px;
+      width: 20px;
+      background-color: inherit;
+      clip-path: polygon(0 0, 100% 0, 100% 100%); }
+    .progress .data-value .remaining-data {
+      font-size: 1.5rem;
+      font-weight: 700; }
+  .progress-value {
+    margin-top: .4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    font-weight: 700;
+    color: #dddbff; }
+
+.fill-bar {
+  width: 80%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 20px;
+  position: relative; }
+
+.fill-bar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5%;
+  border-radius: 50%;
+  background-color: #fff; }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("images/bg-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 80%; }
+
+  .logo-box {
+    padding: 1.5rem;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    width: 80%; }
+    .logo-box .features {
+      justify-content: flex-start; }
+
+  .progress {
+    width: 80%;
+    padding: 1.5rem 2rem; }
+    .progress .detail {
+      font-size: .8rem; }
+      .progress .detail .used-data {
+        font-size: 1rem; }
+    .progress .data-value {
+      top: 85%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1rem;
+      clip-path: none;
+      border-radius: 15px; }
+      .progress .data-value::after {
+        display: none; } }
+
+/*# sourceMappingURL=style.css.map */
